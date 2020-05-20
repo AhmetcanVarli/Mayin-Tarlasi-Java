@@ -53,7 +53,7 @@ public class Ekran implements ActionListener, MouseListener {
         Panel1.add(ustPanel, BorderLayout.NORTH);
         smiley.addActionListener(this);
         smiley.addMouseListener(this);
-        ButonDüzen();
+        ButonDuzen();
         ekran.add(Panel1);
         ekran.pack();
     }
@@ -75,7 +75,7 @@ public class Ekran implements ActionListener, MouseListener {
     public JMenuBar menubar() {
         JMenuBar mBar = new JMenuBar();
         JMenu Oyun = new JMenu("Oyun");
-        JMenu Yardım = new JMenu("Yardım");
+        
         
         final JMenuItem miYeni = new JMenuItem("Yeni Oyun");
         final JMenuItem miBaslangıc = new JMenuItem("Başlangıç");
@@ -132,7 +132,7 @@ public class Ekran implements ActionListener, MouseListener {
         miZor.addActionListener(MenuListener);
         miCıkıs.addActionListener(MenuListener);
         mBar.add(Oyun);
-        mBar.add(Yardım);
+        
         
         return mBar;        
     }
@@ -146,7 +146,7 @@ public class Ekran implements ActionListener, MouseListener {
     JButton buton[][];
     JPanel mayin = null;
     
-    public void ButonDüzen() {
+    public void ButonDuzen() {
         mayindizi = new int[butonwdth][butonhgt];
         buton = new JButton[butonwdth][butonhgt];
         boolean baslangıc = true;
@@ -179,7 +179,7 @@ public class Ekran implements ActionListener, MouseListener {
     
     public void Sıfırla() {
         smiley.setIcon(smileyImageIcon);
-        ButonDüzen();
+        ButonDuzen();
         for (int i = 0; i < butonwdth; i++) {
             for (int j = 0; j < butonhgt; j++) {
                 mayindizi[i][j] = 0;
